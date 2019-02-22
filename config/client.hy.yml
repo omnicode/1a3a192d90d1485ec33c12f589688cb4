@@ -155,12 +155,12 @@ hy:
       next_month: "Հաջորդ Ամիս"
       placeholder: ամսաթիվ
     share:
-      topic: "կիսվել այս թեմայի հղումով"
-      post: "գրառում #%{postNumber}"
+      topic: "<b>Թեմա</b>՝ %{topicTitle}"
+      post: "<b>Գրառում #%{postNumber}</b>, %{postDate}"
       close: "փակել"
-      twitter: "կիսվել այս հղումով Twitter-ում"
-      facebook: "կիսվել այս հղումով Facebook-ում"
-      email: "ուղարկել այս հղումն էլ. փոստով"
+      twitter: "Կիսվել այս հղումով Twitter -ում"
+      facebook: "Կիսվել այս հղումով Facebook -ում"
+      email: "Ուղարկել այս հղումը էլ. նամակով"
 
     action_codes:
       public_topic: "այս թեման դարձրել է հրապարակային  %{when}"
@@ -226,6 +226,7 @@ hy:
         us_west_2: "US West (Oregon)"
 
     edit: "խմբագրել այս թեմայի վերնագիրը և կատեգորիան"
+    expand: "Ընդլայնել"
     not_implemented: "Այդ հատկանիշը դեռևս չի իրագործվել, ներողություն!"
     no_value: "Ոչ"
     yes_value: "Այո"
@@ -1602,6 +1603,7 @@ hy:
         posted: '{{username}}-ը գրառում է կատարել այստեղ՝ "{{topic}}" - {{site_title}}'
         private_message: '{{username}}-ը ուղարկել է Ձեզ անձնական հաղորդագրություն այստեղ՝ "{{topic}}" - {{site_title}}'
         linked: '{{username}}-ը "{{topic}}" - {{site_title}}"-ից հղում է կատարել Ձեր գրառմանը:'
+        watching_first_post: '{{username}} -ը ստեղծել է նոր թեմա՝ "{{topic}}" - {{site_title}}'
         confirm_title: "Ծանուցումները միացված են. %{site_title}"
         confirm_body: "Հաջողվեց! Ծանուցումները միացված են:"
 
@@ -1995,6 +1997,7 @@ hy:
 
       share:
         title: "Կիսվել"
+        extended_title: "Կիսվել հղումով"
         help: "կիսվել այս թեմայի հղումով"
 
       print:
@@ -3388,6 +3391,7 @@ hy:
         location:
           local: "Տեղական Պահոց"
           s3: "S3"
+        backup_storage_error: "Չհաջողվեց մուտք գործել պահուստների պահոց՝ %{error_message}"
 
       export_csv:
         success: "Արտահանումը սկսված է, Դուք ծանուցում կստանաք հաղորդագրության միջոցով, երբ գործընթացն ավարտվի:"
@@ -3414,7 +3418,7 @@ hy:
         save: "Պահպանել"
         new: "Նոր"
         new_style: "Նոր Ոճ"
-        import: "Ներմուծել"
+        install: "Տեղադրել"
         delete: "Ջնջել"
         delete_confirm: "Ջնջե՞լ այս թեման:"
         color: "Գույն"
@@ -3439,17 +3443,15 @@ hy:
           components: "Բաղադրիչներ"
           theme_name: "Թեմայի անվանում"
           component_name: "Բաղադրիչի անուն"
-          themes_intro: "Ընտրեք գոյություն ունեցող թեմա կամ ստեղծեք նորը՝ մեկնարկի համար"
+          themes_intro: "Ընտրել գոյություն ունեցող թեմա կամ տեղադրել նորը՝ մեկնարկի համար"
           beginners_guide_title: "Discourse Թեմաների օգտագործման Սկսնակի ուղեցույց"
           developers_guide_title: " Discourse Թեմաների՝ Ծրագրավորողի ուղեցույց"
           browse_themes: "Դիտել համայնքի թեմաները"
-          import_theme: "Ներմուծել Թեմա"
           customize_desc: "Անհատականացնել՝ "
           title: "Թեմաներ"
           create: "Ստեղծել"
-          create_type: "Տիպ՝ "
-          create_name: "Անուն՝ "
-          name_too_short: "Անունը պետք է պարունակի առնվազն 4 սիմվոլ:"
+          create_type: "Տիպ"
+          create_name: "Անուն"
           long_title: "Փոփոխել Ձեր կայքի գույները, CSS և HTML բովանդակությունը"
           edit: "Խմբագրել"
           edit_confirm: "Սա հեռադիր թեմա է, եթե Դուք խմբագրեք CSS/HTML-ը, Ձեր փոփոխությունները կկորչեն թեմայի հաջորդ թարմացման ժամանակ:"
@@ -3457,7 +3459,11 @@ hy:
           desktop: "Համակարգչային"
           mobile: "Հեռախոսային"
           settings: "Կարգավորումներ"
+          translations: "Թարգմանություններ"
           preview: "Նախադիտում"
+          show_advanced: "Ցուցադրել ընդլայնված դաշտերը"
+          hide_advanced: "Թաքցնել ընդլայնված դաշտերը"
+          hide_unused_fields: "Թաքցնել չօգտագործված դաշտերը"
           is_default: "Թեման լռելյայն միացված է"
           user_selectable: "Թեման կարող է ընտրվել օգտատերերի կողմից"
           color_scheme: "Գունապնակ"
@@ -3501,6 +3507,12 @@ hy:
           is_private: "Թեման մասնավոր git ռեպոզիտորիայում է:"
           remote_branch: "Ճյուղի անունը (ըստ ցանկության)"
           public_key: "Շնորհել հետևյալ public key թույլտվություն ռեպոյին՝ "
+          install: "Տեղադրել"
+          installed: "Տեղադրված"
+          install_popular: "Ճանաչված"
+          install_upload: "Ձեր սարքավորումից"
+          install_git_repo: "git ռեպոզիտորիայից"
+          install_create: "Ստեղծել նոր"
           about_theme: "Մասին"
           license: "Լիցենզիա"
           version: "Տարբերակ՝"
@@ -3772,6 +3784,7 @@ hy:
             merge_user: "միավորել օգտատերերի"
             entity_export: "արտահանել այս միավորը (export entity)"
             change_name: "փոխել անունը"
+            topic_timestamps_changed: "թեմայի ժամանակակետը փոփոխվել է"
         screened_emails:
           title: "Ցուցադրված Էլ. հասցեները"
           description: "Երբ որևէ մեկը փորձի ստեղծել նոր հաշիվ, հետևյալ էլ. հասցեները կստուգվեն, և գրանցումը կարգելափոկվի, կամ կկատարվի մեկ այլ գործողություն:"
@@ -3801,7 +3814,7 @@ hy:
             filter: "Որոնել"
           roll_up:
             text: "Խմբավորել"
-            title: "Ստեղծում է նոր սուբնեթի արգելքների մուտքր, եթե կա առնվազն 'min_ban_entries_for_roll_up' մուտք:"
+            title: "Ստեղծում է նոր սուբնեթի արգելքների մուտքեր, եթե կա առնվազն 'min_ban_entries_for_roll_up' մուտք:"
         search_logs:
           title: "Որոնել Գրառումներ"
           term: "Պայման"
@@ -3949,8 +3962,6 @@ hy:
         suspended: "Սառեցվա՞ծ"
         staged: "Աստիճանավորվա՞ծ"
         show_admin_profile: "Ադմին"
-        refresh_browsers: "Հարկադրել բրաուզերի թարմացում"
-        refresh_browsers_message: "Հաղորդագրությունն ուղարկված է բոլոր հաճախորդներին!"
         show_public_profile: "Ցուցադրել Հանրային Պրոֆիլը"
         impersonate: "Նմանակել"
         action_logs: "Գործողությունների Գրառումները"
@@ -4250,10 +4261,9 @@ hy:
             with_post_time: "<span class=\"username\">%{username}</span>-ին %{link}-ում գրառման համար <span class=\"time\">%{time}</span> -ին"
             with_time: "<span class=\"username\">%{username}</span>-ին <span class=\"time\">%{time}</span>-ին"
         badge_intro:
-          title: 'Ընտրեք գոյություն ունեցող կրծքանշան կամ ստեղծեք նորը՝ մեկնարկի համար'
-          what_are_badges_title: 'Ի՞նչ է կրծքանշանը:'
-          badge_query_examples_title: 'Կրծքանշանների հարցման օրինակներ'
-
+          title: "Ընտրեք գոյություն ունեցող կրծքանշան կամ ստեղծեք նորը՝ մեկնարկի համար"
+          what_are_badges_title: "Ի՞նչ է կրծքանշանը:"
+          badge_query_examples_title: "Կրծքանշանների հարցման օրինակներ"
 
       emoji:
         title: "Էմոջի"
