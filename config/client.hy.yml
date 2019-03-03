@@ -155,8 +155,8 @@ hy:
       next_month: "Հաջորդ Ամիս"
       placeholder: ամսաթիվ
     share:
-      topic: "<b>Թեմա</b>՝ %{topicTitle}"
-      post: "<b>Գրառում #%{postNumber}</b>, %{postDate}"
+      topic_html: 'Թեմա՝ <span class="topic-title">%{topicTitle}</span>'
+      post: "գրառում #%{postNumber}"
       close: "փակել"
       twitter: "Կիսվել այս հղումով Twitter -ում"
       facebook: "Կիսվել այս հղումով Facebook -ում"
@@ -668,6 +668,8 @@ hy:
       new_private_message: "Նոր Հաղորդագրություն"
       private_message: "Հաղորդագրություն"
       private_messages: "Հաղորդագրություններ"
+      ignore: "Անտեսել"
+      watch: "Դիտել"
       activity_stream: "Ակտիվություն"
       preferences: "Նախընտրություններ"
       profile_hidden: "Այս օգտատիրոջ հրապարակային պրոֆիլը թաքցրած է:"
@@ -814,6 +816,7 @@ hy:
         copied_to_clipboard: "Կրնօրինակված է Փոխանակման հարթակում"
         copy_to_clipboard_error: "Փոխանակման հարթակում տվյալների կրկնօրինակման սխալ"
         remaining_codes: "Ձեզ մնացել է պահուստային <strong>{{count}}</strong> կոդ:"
+        use: "<a href>Օգտագործեք պահուստի կոդ</a>"
         codes:
           title: "Պահուստային Կոդերը Գեներացվել են"
           description: "Այս պահուստային կոդերից յուրաքանչյուրը կարող է օգտագործվել միայն մեկ անգամ: Պահեք դրանք ապահով, բայց հասանելի վայրում:"
@@ -832,6 +835,7 @@ hy:
         extended_description: |
           Երկգործոն վավերացումն ավելացնում է էքստրա-անվտանգություն Ձեր հաշվին՝ պահանջելով մեկանգամյա կոդանշան(token)՝ ի հավելումն Ձեր գաղտնաբառին: Կոդանշանները կարող են գեներացվել <a href="https://www.google.com/search?q=authenticator+apps+for+android" target='_blank'>Android</a> և <a href="https://www.google.com/search?q=authenticator+apps+for+ios">iOS</a> սարքերով:
         oauth_enabled_warning: "Խնդրում ենք նկատի ունենալ, որ սոցիալական ցանցերով մուտքը կանջատվի, հենց որ երկգործոն վավերացումը միացվի Ձեր հաշվի համար:"
+        use: "<a href>Օգտագործեք Authenticator հավելվածը</a>"
 
       change_about:
         title: "Փոփոխել Իմ Մասին բաժինը"
@@ -944,6 +948,7 @@ hy:
       website: "Վեբ Կայք"
       email_settings: "Էլ. հասցե"
       hide_profile_and_presence: "Թաքցնել իմ հրապարակային պրոֆիլը և ներկայության հատկանիշները"
+      enable_physical_keyboard: "Միացնել ֆիզիկական ստեղնաշարի ապահովումը iPad -ի վրա"
 
       text_size:
         title: "Տեքստի Չափը"
@@ -1830,7 +1835,7 @@ hy:
       read_more: "Ցանկանո՞ւմ եք կարդալ ավելին: {{catLink}} կամ {{latestLink}}."
 
       # keys ending with _MF use message format, see https://meta.discourse.org/t/message-format-support-for-localization/7035 for details
-      read_more_MF: "Կա { UNREAD, plural, =0 {} one {<a href='{basePath}/unread'>1 չկարդացած</a> } other { <a href='{basePath}/unread'># չկարդացած</a> } } { NEW, plural, =0 {} one { {BOTH, select, true{and } false {is } other{}} <a href='{basePath}/new'>1 նոր</a> topic} other { {BOTH, select, true{and } false {are } other{}} <a href='{basePath}/new'># նոր</a> թեմա} } , կամ {CATEGORY, select, true {դիտեք այլ թեմաներ {catLink}} false {{latestLink}} other {}}"
+      read_more_MF: " { UNREAD, plural, =0 {} one {<a href='{basePath}/unread'>1 չկարդացած</a> } other { <a href='{basePath}/unread'># չկարդացած</a> } } { NEW, plural, =0 {} one { {BOTH, select, true{and } false {Կա} other{}} <a href='{basePath}/new'>1 նոր</a> topic} other { {BOTH, select, true{and } false {կա } other{}} <a href='{basePath}/new'># նոր</a> թեմա} } , կամ {CATEGORY, select, true {դիտեք այլ թեմաներ {catLink}} false {{latestLink}} other {}}"
 
       browse_all_categories: Դիտել բոլոր կատեգորիաները
 
